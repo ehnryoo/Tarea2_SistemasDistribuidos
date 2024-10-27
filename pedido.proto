@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package pedidos;
+
+// Mensaje para representar una compra
+message Compra {
+    string cliente = 1;
+    string producto = 2;
+    float precio = 3;
+    string pasarela_pago = 4;
+    string marca_tarjeta = 5;
+    string banco = 6;
+    string comuna = 7;
+    string direccion = 8;
+    string email = 9;
+}
+
+// Servicio para gestionar pedidos
+service GestionPedidos {
+    rpc RealizarCompra (Compra) returns (Respuesta) {}
+}
+
+// Mensaje de respuesta
+message Respuesta {
+    string mensaje = 1;
+    bool exito = 2;
+}

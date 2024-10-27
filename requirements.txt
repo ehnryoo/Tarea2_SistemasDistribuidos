@@ -1,0 +1,4 @@
+grpcio
+grpcio-tools
+confluent_kafka
+elasticsearch
