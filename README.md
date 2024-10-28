@@ -1,36 +1,34 @@
-# Tarea 2 | Sistemas Distribiduidos | 2-2024
+# Tarea 2 | Sistemas Distribuidos | 2-2024
+En este repositorio se encuentran todos los códigos implementados para  levantar el sistema de Kafka solicitado para la tarea.
 
-Repositorio en donde se encuentran los archivos para el funcionamiento del sistema Kafka referente a la Tarea 2.
+Integrantes:
+* Cristóbal Barra
+* Jorge Gallegos
 
-### Stack
+## Stack de tecnologías usado
 
-<p align='left'>
-    <a href='https://docs.docker.com/' target='_blank'>
-        <img src='https://img.shields.io/badge/docker-0F3486?style=for-the-badge&logo=docker&link=https%3A%2F%2Fdocs.docker.com%2F' height='30'>
-    </a>
-    <a href='https://www.postgresql.org/docs/' target='_blank'>
-        <img src='https://img.shields.io/badge/Postgresql-6395BF?style=for-the-badge&logo=postgresql&logoColor=%23ffffff&link=https%3A%2F%2Fwww.postgresql.org%2Fdocs%2F' height='30'>
-    </a>
-    <a href='https://www.python.org/doc/' target='_blank'>
-        <img src='https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54' height='30'>
-    </a>
-    <a href='https://kafka.apache.org/documentation/' target='_blank'>
-        <img src='https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white' height='30'>
-    </a>
-</p>
+[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=flat)](https://www.docker.com/)
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat)](https://www.python.org/)
+[![Kafka](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white&style=flat)](https://redis.io/)
 
-### Video tutorial, este si es un tutorial chicos 😎
+## Instrucciones de uso
 
-<a href = 'https://www.youtube.com/watch?v=zAL8i0FzxL8'
-target='_blank'>
-<img src='https://img.shields.io/badge/Video-0F0F0F?style=for-the-badge&logo=youtube&logoColor=%23FF0000'>
-</a>
+En la terminal utilizar los siguientes comandos:
 
-### Documentación
-
-- [Kafka](https://docs.confluent.io/kafka-clients/python/current/overview.html#id1)
-- [confluent_kafka](https://docs.confluent.io/platform/current/clients/confluent-kafka-python/html/index.html#)
-- [Create/Delete topics](https://medium.com/@mfayisam/create-delete-topics-in-confluent-kafka-using-python-2a08014039ab)
-- [Producer](https://www.geeksforgeeks.org/introduction-to-confluent-kafka-python-producer/)
-- [Consumer](https://github.com/confluentinc/confluent-kafka-python)
-- [Tarea resuelta](https://www.google.com)
+```bash
+ git clone https://github.com/georgo0/T1-Sistema_Distribuidos
+```
+Desde la carpeta T1_Sistema_Distribuidos, levantar los contenedores y arrancar la API
+```bash
+docker compose up -d
+```
+```bash
+uvicorn app:app --reload
+```
+Ejemplos de uso:
+```bash
+ python traffic_generator.py
+```
+```bash
+ python test_requests.py
+```
