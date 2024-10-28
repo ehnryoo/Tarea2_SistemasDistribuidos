@@ -9,26 +9,17 @@ Integrantes:
 
 [![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=flat)](https://www.docker.com/)
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat)](https://www.python.org/)
-[![Kafka](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white&style=flat)](https://redis.io/)
+[![Static Badge](https://img.shields.io/badge/Apache%20Kafka-black?logo=apachekafka)](https://kafka.apache.org/documentation/)
+
 
 ## Instrucciones de uso
 
 En la terminal utilizar los siguientes comandos:
 
 ```bash
- git clone https://github.com/georgo0/T1-Sistema_Distribuidos
+ git clone https://github.com/ehnryoo/Tarea2_SistemasDistribuidos
 ```
 Desde la carpeta T1_Sistema_Distribuidos, levantar los contenedores y arrancar la API
 ```bash
-docker compose up -d
-```
-```bash
-uvicorn app:app --reload
-```
-Ejemplos de uso:
-```bash
- python traffic_generator.py
-```
-```bash
- python test_requests.py
+docker-compose up --build
 ```
