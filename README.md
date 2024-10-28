@@ -1,6 +1,6 @@
-# Sistemas Distribuidos - 2024-2 - CIT2021
+# Tarea 2 | Sistemas Distribiduidos | 2-2024
 
-Este es el repositorio del curso de Sistemas Distribuidos, en el cual encontraran los códigos y ejemplos que iremos mostrando en ayudantía. Estos ejemplos podran usarlo como una guía para sus tareas. Además, pueden utilizar este README.md como guía para ordenar sus entregas.
+Repositorio en donde se encuentran los archivos para el funcionamiento del sistema Kafka referente a la Tarea 2.
 
 ### Stack
 
