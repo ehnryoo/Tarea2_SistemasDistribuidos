@@ -1,14 +1,14 @@
 import grpc
 from concurrent import futures
 import time
-import kafka
+from confluent_kafka import Producer
 import pedido_pb2
 import pedido_pb2_grpc
 
 class GestionPedidos(pedido_pb2_grpc.GestionPedidosServicer):
 
     def __init__(self, kafka_topic):
-        self.producer = kafka.KafkaProducer(bootstrap_servers='localhost:9092')
+        self.producer = Producer({'bootstrap.servers': 'localhost:9092'})
         self.kafka_topic = kafka_topic
 
     def RealizarCompra(self, request, context):
@@ -24,8 +24,10 @@ class GestionPedidos(pedido_pb2_grpc.GestionPedidosServicer):
             'direccion': request.direccion,
             'email': request.email,
         }
-        
-        self.producer.send(self.kafka_topic, value=mensaje)
+
+        # Serializa el mensaje a formato JSON (o cualquier otro formato que necesites)
+        # Aquí puedes usar json.dumps(mensaje) si deseas enviar un string JSON
+        self.producer.produce(self.kafka_topic, value=str(mensaje))
         self.producer.flush()
 
         return pedido_pb2.Respuesta(mensaje="Compra realizada con éxito", exito=True)
