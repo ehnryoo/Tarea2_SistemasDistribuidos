@@ -23,3 +23,10 @@ Desde la carpeta T1_Sistema_Distribuidos, levantar los contenedores y arrancar l
 ```bash
 docker-compose up --build
 ```
+Para iniciar el servidor gRPC y generar compras
+```bash
+python server.py
+```
+```bash
+python generar_compra.py
+```
